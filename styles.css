@@ -1,0 +1,41 @@
+body{
+  width: 612px;
+}
+
+input{
+  width: 100px;
+  padding: 0;
+  margin: 0;
+}
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.float{
+  float: left;
+  margin-top: 24px;
+}
+
+.float p{
+  height: 19px;
+  margin: 4px;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex p{
+  text-align: center;
+  width: 104px;
+  margin: 0;
+}
+
+.calc1, .calc2{
+  display: flex;
+  flex-direction: column;
+}
+

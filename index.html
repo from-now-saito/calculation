@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>excelLike</title>
+</head>
+
+<body>
+  <div class="clearfix">
+    <div class="float">
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
+      <p>4</p>
+      <p>5</p>
+    </div>
+    <div class="flex">
+      <p>A</p>
+      <p>B</p>
+      <p>C</p>
+      <p>D</p>
+      <p>E</p>
+    </div>
+    <!-- 下のformにinputを格納 -->
+    <form></form>
+  </div>
+
+  <h2 id="calcRes">--ここに計算結果が表示されます--</h2>
+  <button class="btn">計算</button>
+
+  <div class="flex">
+    <div class="flex">
+      <div>
+        <p>引数①</p>
+        <input type="text" class="arg">
+      </div>
+      <form id="calc1">
+        <input type="radio" name="radio" value="addition">+
+        <input type="radio" name="radio" value="subtraction">-
+        <input type="radio" name="radio" value="multipulication">×
+        <input type="radio" name="radio" value="division">÷
+      </form>
+    </div>
+    <div class="flex">
+      <div>
+        <p>引数②</p>
+        <input type="text" class="arg">
+      </div>
+      <form id="calc2">
+        <input type="radio" name="radio2" value="addition">+
+        <input type="radio" name="radio2" value="subtraction">-
+        <input type="radio" name="radio2" value="multipulication">×
+        <input type="radio" name="radio2" value="division">÷
+      </form>
+    </div>
+    <div>
+      <p>引数③</p>
+      <input type="text" class="arg">
+    </div>
+  </div>
+
+  <h1>説明</h1>
+  <p>任意のセル3つを用いて計算を行います。</p>
+  <p>計算方法は足し算、引き算、かけ算、割り算の4つから選べます。</p>
+  <p>まず、引数①②を用いて計算します。</p>
+  <p>次に、引数①②を用いた計算結果と、引数③を用いて計算します。</p>
+  <p>
+    例：計算方法を、"①＋②×③"と指定した場合、<br>
+    (①＋②)×③というように計算されます。
+  </p>
+
+  <h1>注意</h1>
+  <p>全て半角英数字で入力してください</p>
+  <p>セルを指定する際、アルファベットは大文字を使ってください</p>
+  <p>セルに数値を入力する際、先頭に0が付きますが、無視して構いません
+  </p>
+  <p>例：02 → 2 として扱われます。</p>
+
+  <h1>使い方</h1>
+  <p>①計算に用いる数値を、表の各セルに入力します。</p>
+  <p>
+  ②計算に用いるセルを、引数①～③に入力します。<br>
+  例：一番左上のセル → A1、 A1の右下 → B2
+  </p>
+  <p>③「計算」ボタンをクリックしてください。</p>
+  <p>④計算結果が表示されます</p>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
