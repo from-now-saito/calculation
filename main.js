@@ -30,8 +30,8 @@ function srcLat(args){
 
 //縦軸１～５を取得、対応する番号を割り振り、項目を配列に格納
 const vertical = [0, 5, 10, 15, 20];
-const verSource = ['1', '2', '3', '4', '5']; //項目を配列に格納
-let verNums; //calclationで使用。
+const verSource = ['1', '2', '3', '4', '5']; 
+let verNums; 
 
 //引数の二文字目に対応する数値を決定
 function srcVer(args){
@@ -50,9 +50,9 @@ let result;
 
 //計算に用いるセルを配列に挿入、演算
 function calclation(){
-  cells = []; //cellsのリフレッシュ。これをしないと、計算ボタンを押すたびにcellsに要素が追加される
-  const args = Array.from(document.querySelectorAll('.arg'));   //querySelectorAllではnodelistが作られる。配列は完成しない。
-  // 縦軸・横軸それぞれ、対応する番号を格納、和によってinputのindex番号を求める
+  cells = [];
+  const args = Array.from(document.querySelectorAll('.arg')); 
+  // 縦軸・横軸それぞれ、対応する番号を格納、和によって何番目のセルか指定する
   latNums = args.map(srcLat);
   verNums = args.map(srcVer);
   for(let i = 0; i < args.length; i++){
@@ -61,7 +61,6 @@ function calclation(){
   }
   // 結果
   result = calc1(cells);
-  // console.log(calc2(cells))
   calc2(cells);
   document.getElementById('calcRes').textContent = `計算結果は ${result} です。`;
 }
